@@ -1,0 +1,217 @@
+header, nav, footer {
+    background-image: linear-gradient(to right, red, yellow);
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: end;
+}
+
+h1 {
+    border-bottom: 4px solid black;
+    margin: 0 0 6px 0; /* margin: top right bottom left */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 18px;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.side-img {
+    max-width: 40%;
+    padding: 0 4px;
+}
+
+.side-content {
+    max-width: 60%;
+    padding: 0 4px;
+}
+
+.flex-row, .side-container, .todo-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-container {
+    padding: 4px 0;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.no-display {
+    display: none;
+}
+
+.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* content container: https://getbootstrap.com/docs/5.0/layout/containers/ */
+.container, .container-l1, .container-l2, .container-l3, .container-l4 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1320px;
+}
+
+.container-l1 {
+    max-width: 1140px;
+}
+
+.container-l2 {
+    max-width: 960px;
+}
+
+.container-l3 {
+    max-width: 720px;
+}
+
+.container-l4 {
+    max-width: 540px;
+}
+
+@media(max-width: 1399px) {
+    .container {
+        max-width: 1140px !important;
+    }
+}
+
+@media(max-width: 1199px) {
+    .container, .container-l1 {
+        max-width: 960px !important;
+    }
+}
+
+@media(max-width: 991px) {
+    .container, .container-l1, .container-l2 {
+        max-width: 720px !important;
+    }
+
+    body {
+        font-size: 20px !important;
+    }
+
+    .side-container {
+        flex-direction: column !important;
+    }
+
+    .side-img {
+        max-width: 100% !important;
+        padding: 4px !important;
+    }
+
+    .side-content {
+        max-width: 100% !important;
+        padding: 4px !important;
+    }
+}
+
+@media(max-width: 767px) {
+    .container, .container-l1, .container-l2, .container-l3 {
+        max-width: 540px !important;
+    }
+}
+
+@media(max-width: 575px) {
+    .container, .container-l1, .container-l2, .container-l3, .container-l4 {
+        max-width: 100% !important;
+    }
+}
+
+input[type="number"],
+input.number {
+    width: 3em;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+.margin-center {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.preline {
+    white-space: pre-line;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.block {
+    display: block;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* fade in transition */
+.fade-in {
+    animation: fade_in .5s;
+}
+
+@keyframes fade_in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* fade out transition */
+.fade-out {
+    animation: fade_out .5s;
+}
+
+@keyframes fade_out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
