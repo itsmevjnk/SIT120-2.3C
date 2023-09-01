@@ -1,18 +1,25 @@
 <script setup>
 /* 10.a. Props */
 const props = defineProps({
-    index: Number,
+    index: {
+        type: Number,
+        default: -1
+    },
     color: Number,
-    content: String    
+    content: String,
+    class: {
+        type: String,
+        default: ''
+    } 
 })
 /* 10.b. Events using $emit */
 defineEmits(['delete'])
 </script>
 
 <template>
-    <div v-bind:class="'todo-item color-' + color">
+    <div v-bind:class="'todo-item color-' + props.color + ' ' + props.class">
         <div class="content">{{ props.content }}</div>
-        <div class="button" @click="$emit('delete', props.index)">❌</div>
+        <div class="button" v-if="props.index != -1" @click="$emit('delete', props.index)">❌</div>
     </div>
 </template>
 
@@ -40,5 +47,9 @@ defineEmits(['delete'])
     flex: 0;
     cursor: pointer;
     padding: 4px;
+}
+
+.todo-item.opaque {
+    opacity: 0.5;
 }
 </style>
